@@ -104,3 +104,4 @@ http://127.0.0.1:8000/docs
 
 There is uncertainty in this step. Will the truck owner be driven to the grocery store after every order of 80 tacos or when he has 20 remaining supplies? If 80 orders are to be directed to the grocery store, this causes the following logical error. Because of this, I wrote test scenarios according to the constant stock of 20 tacos.
 
+![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
