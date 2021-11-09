@@ -67,6 +67,8 @@ http://127.0.0.1:8000/docs
 * If you want, you can run the tests in your local or with docker
 * Not: If you want to run the tests individually from the ide in your local, you should update the relative path in api.py. Paths are configured to run in terminal. For example: '../data/deliveries_for_planning.json'
 
+### [PROBLEM] Problems seen in question 1.
+
 ![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
 ##  Question 2:
@@ -76,17 +78,3 @@ http://127.0.0.1:8000/docs
 ##  Question 3:
 
 * For the third question, you can see the test cases written in gherkin language under the ../features folder
-
-### [PROBLEM] During the tests, the following problems were seen.
-
-* Minimum length check can be added for "api/v1/tasks" api.
-
-* Bad character check can be added for "api/v1/tasks" api. For example: "'+&/)&++"
-
-* For PutTaskAPI, when we send a "null" value to the title field, it should give an error, but it acts as if it is updating.
-
-* Min length and bad character control can be added for PutTaskAPI.
-
-* There is a general problem for all api's. If we set the endpoints as invalid and call them, the .php extension files are displayed for the error message. A safer and more understandable error message may be displayed. Displaying all php file paths can also cause a security vulnerability.
-
-* Likewise, when the "id" field is sent invalid at the endpoints of getTaskAPI, putTaskAPI and getTaskAPI, the response message appears to be problematic. Again, the line numbers of the code file with the .php extension error are displayed. The error level must be changed.
