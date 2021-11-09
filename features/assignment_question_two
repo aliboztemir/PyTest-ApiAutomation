@@ -1,6 +1,17 @@
-Feature: API Feature
-   An API that shows Gherkin example
-   Scenario: Request something from the test API
-      Given I am a verified user
-      When I want to request something
-      Then I should get something
+Feature: API Calculates the best route
+  The REST_API calculates the best route possible for a day.
+
+  Scenario: There are delivery for order count 78-79
+    Given Truck owner shopped from Grocery for 100 Tacos in the morning
+    When Truck owner sent a request to the Best_Route api to add order_count places at the start of the shift
+      | order_count |
+      | 78          |
+      | 79          |
+      | 81          |
+      | 178         |
+      | 179         |
+      | 181         |
+      | 278         |
+      | 279         |
+      | 281         |
+    Then Grocery is not displayed in Best_Route response
