@@ -69,6 +69,13 @@ http://127.0.0.1:8000/docs
 
 ![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
+##  Question 2:
+
+* I will share the details of the answer to this question via e-mail
+
+##  Question 3:
+
+* For the third question, you can see the test cases written in gherkin language under the ../features folder
 
 ### [PROBLEM] During the tests, the following problems were seen.
 
