@@ -68,14 +68,27 @@ http://127.0.0.1:8000/docs
 * Not: If you want to run the tests individually from the ide in your local, you should update the relative path in api.py. Paths are configured to run in terminal. For example: '../data/deliveries_for_planning.json'
 
 #### [PROBLEM] Problems seen in question 1.
-* In option b, the question asked to compare the total weight value with the carrying_capacity value. But some items did not have a weight value. I added condition in case of null.
-* Test steps c and d failed. The values in the test outputs did not pass the assert rule.
+*In option b, the question asked to compare the total weight value with the carrying_capacity value. But some items did not have a weight value. I added condition in case of null.
+*Test steps c and d failed. The values in the test outputs did not pass the assert rule.
 
 ![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
 ##  Question 2:
 
 * I will share the details of the answer to this question via e-mail
+
+#### [PROBLEM] Problems seen in question 2.
+
+*In general, there were some shortcomings in the business rules. That's why I didn't ask you questions again. I have defined some conditions as I understand them. I designed test scenarios accordingly.
+
+*is there Origination point input? Is the current location of the trucker owner being sent to the api? Does Origination take into account when calculating API routes?
+
+*Are fuel station, grocery and bank different entities/input type?
+
+*What is the input(address list) type? (json array, comma separated text, file etc)
+
+*Will we always accept the place list added by the truck owner as correct?
+
 
 ##  Question 3:
 
