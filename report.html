@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 09-Nov-2021 at 17:35:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 09-Nov-2021 at 22:42:54 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -445,8 +445,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.8</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 0.44 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>5 tests ran in 0.43 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -465,15 +465,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">def test_check_all_etas_min_max_route_time():<br/>        response_route = client.get(&#x27;/route&#x27;)<br/>        input_dict_route = json.loads(response_route.text)<br/>    <br/>        print(&quot;eta_list&quot;)<br/>        eta_list = [x[&#x27;algorithm_fields&#x27;][&#x27;eta&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;] if<br/>                    &#x27;eta&#x27; in x[&#x27;algorithm_fields&#x27;]]<br/>        for val in eta_list:<br/>            print(val)<br/>    <br/>        route_min_time = input_dict_route[&#x27;planned_route&#x27;][&#x27;route_min_time&#x27;]<br/>        print(&quot;route_min_time: &quot;, route_min_time)<br/>        route_max_time = input_dict_route[&#x27;planned_route&#x27;][&#x27;route_max_time&#x27;]<br/>        print(&quot;route_max_time: &quot;, route_max_time)<br/>    <br/>        for val in eta_list:<br/>&gt;           assert route_min_time &lt;= val &lt;= route_max_time<br/><span class="error">E           AssertionError: assert &#x27;2017-11-13T07:30:00.000000Z&#x27; &lt;= &#x27;2017-11-13T07:00:00.000000Z&#x27;</span><br/><br/>test/test.py:72: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>eta_list
-2017-11-13T07:00:00.000000Z
-2017-11-13T08:00:17.000000Z
-2017-11-13T08:53:08.000000Z
-2017-11-13T09:05:08.000000Z
-2017-11-13T10:30:20.000000Z
-route_min_time:  2017-11-13T07:30:00.000000Z
-route_max_time:  2017-11-13T13:30:00.000000Z
-<br/></div></td></tr></tbody>
+            <div class="log">def test_check_all_etas_min_max_route_time():<br/>        response_route = client.get(&#x27;/route&#x27;)<br/>        input_dict_route = json.loads(response_route.text)<br/>    <br/>        eta_list = [x[&#x27;algorithm_fields&#x27;][&#x27;eta&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;] if<br/>                    &#x27;eta&#x27; in x[&#x27;algorithm_fields&#x27;]]<br/>    <br/>        route_min_time = input_dict_route[&#x27;planned_route&#x27;][&#x27;route_min_time&#x27;]<br/>        route_max_time = input_dict_route[&#x27;planned_route&#x27;][&#x27;route_max_time&#x27;]<br/>    <br/>        for val in eta_list:<br/>&gt;           assert route_min_time &lt;= val &lt;= route_max_time<br/><span class="error">E           AssertionError: assert &#x27;2017-11-13T07:30:00.000000Z&#x27; &lt;= &#x27;2017-11-13T07:00:00.000000Z&#x27;</span><br/><br/>test/test.py:50: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
@@ -482,25 +474,7 @@ route_max_time:  2017-11-13T13:30:00.000000Z
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">def test_check_all_etas_min_max_delivery_time():<br/>        response_route = client.get(&#x27;/route&#x27;)<br/>        input_dict_route = json.loads(response_route.text)<br/>    <br/>        print(&quot;eta_list&quot;)<br/>        eta_list = list([x[&#x27;algorithm_fields&#x27;][&#x27;eta&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;] if<br/>                         &#x27;eta&#x27; in x[&#x27;algorithm_fields&#x27;]])<br/>        for val in eta_list:<br/>            print(val)<br/>    <br/>        print(&quot;delivery_min_time_list&quot;)<br/>        min_time_list = list([x[&#x27;min_time&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;]])<br/>        for val in min_time_list:<br/>            print(val)<br/>    <br/>        print(&quot;delivery_max_time_list&quot;)<br/>        max_time_list = list([x[&#x27;max_time&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;]])<br/>        for val in max_time_list:<br/>            print(val)<br/>    <br/>        assert len(eta_list) == len(min_time_list) == len(max_time_list)<br/>    <br/>        for i in range(len(eta_list)):<br/>&gt;           assert min_time_list[i] &lt;= eta_list[i] &lt;= max_time_list[i]<br/><span class="error">E           AssertionError: assert &#x27;2017-11-13T08:53:08.000000Z&#x27; &lt;= &#x27;2017-11-13T08:30:00.000000Z&#x27;</span><br/><br/>test/test.py:98: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>eta_list
-2017-11-13T07:00:00.000000Z
-2017-11-13T08:00:17.000000Z
-2017-11-13T08:53:08.000000Z
-2017-11-13T09:05:08.000000Z
-2017-11-13T10:30:20.000000Z
-delivery_min_time_list
-2017-11-13T07:00:00.000000Z
-2017-11-13T07:30:00.000000Z
-2017-11-13T07:30:00.000000Z
-2017-11-13T07:30:00.000000Z
-2017-11-13T07:45:00.000000Z
-delivery_max_time_list
-2017-11-13T07:45:00.000000Z
-2017-11-13T13:00:00.000000Z
-2017-11-13T08:30:00.000000Z
-2017-11-13T13:00:00.000000Z
-2017-11-13T13:30:00.000000Z
-<br/></div></td></tr></tbody>
+            <div class="log">def test_check_all_etas_min_max_delivery_time():<br/>        response_route = client.get(&#x27;/route&#x27;)<br/>        input_dict_route = json.loads(response_route.text)<br/>    <br/>        eta_list = list([x[&#x27;algorithm_fields&#x27;][&#x27;eta&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;] if<br/>                         &#x27;eta&#x27; in x[&#x27;algorithm_fields&#x27;]])<br/>    <br/>        min_time_list = list([x[&#x27;min_time&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;]])<br/>        max_time_list = list([x[&#x27;max_time&#x27;] for x in input_dict_route[&#x27;planned_route&#x27;][&#x27;deliveries&#x27;]])<br/>    <br/>        assert len(eta_list) == len(min_time_list) == len(max_time_list)<br/>    <br/>        for i in range(len(eta_list)):<br/>&gt;           assert min_time_list[i] &lt;= eta_list[i] &lt;= max_time_list[i]<br/><span class="error">E           AssertionError: assert &#x27;2017-11-13T08:53:08.000000Z&#x27; &lt;= &#x27;2017-11-13T08:30:00.000000Z&#x27;</span><br/><br/>test/test.py:66: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -509,21 +483,7 @@ delivery_max_time_list
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Planned Routes
-158387cc-50cd-41d5-babc-23f7dc4d39ff
-482ddef5-7c9c-4253-8c7c-2a18b49ba8be
-60adbe31-d693-4dd7-8368-94545be514de
-a69db991-0e76-4377-868a-9c428dbaf7b1
-63ff95fa-98b1-40f5-9711-b22c4dfdcd27
-Delivery List
-482ddef5-7c9c-4253-8c7c-2a18b49ba8be
-60adbe31-d693-4dd7-8368-94545be514de
-a69db991-0e76-4377-868a-9c428dbaf7b1
-exist_list
-482ddef5-7c9c-4253-8c7c-2a18b49ba8be
-60adbe31-d693-4dd7-8368-94545be514de
-a69db991-0e76-4377-868a-9c428dbaf7b1
-<br/></div></td></tr></tbody>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -532,10 +492,13 @@ a69db991-0e76-4377-868a-9c428dbaf7b1
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>carrying_capacity : 180
-weights
-43
-64
-64
-sum 171
-<br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test/test.py::test_check_travel_time_to_next</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
