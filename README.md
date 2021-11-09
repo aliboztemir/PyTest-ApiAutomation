@@ -1,5 +1,5 @@
-# fastapi-example 
-A simple example of using Fast API in Python.
+# QA Test Engineer: Assignment
+Tests of the API that calculates the best route.
 
 ## Preconditions:
 
