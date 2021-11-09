@@ -50,9 +50,3 @@ docker-compose exec app pytest test/test.py
 ```
 http://127.0.0.1:8000/docs
 ```
-
-### Run server
-
-```
-docker-compose exec db psql --username=fastapi --dbname=fastapi_dev
-```
