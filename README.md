@@ -68,6 +68,8 @@ http://127.0.0.1:8000/docs
 * Not: If you want to run the tests individually from the ide in your local, you should update the relative path in api.py. Paths are configured to run in terminal. For example: '../data/deliveries_for_planning.json'
 
 #### [PROBLEM] Problems seen in question 1.
+* In option b, the question asked to compare the total weight value with the carrying_capacity value. But some items did not have a weight value. I added condition in case of null.
+* Test steps c and d failed. The values in the test outputs did not pass the assert rule.
 
 ![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
