@@ -70,3 +70,29 @@ def test_check_all_etas_min_max_route_time():
 
     for val in eta_list:
         assert route_min_time <= val <= route_max_time
+
+
+def test_check_all_etas_min_max_delivery_time():
+    response_route = client.get('/route')
+    input_dict_route = json.loads(response_route.text)
+
+    print("eta_list")
+    eta_list = list([x['algorithm_fields']['eta'] for x in input_dict_route['planned_route']['deliveries'] if
+                     'eta' in x['algorithm_fields']])
+    for val in eta_list:
+        print(val)
+
+    print("delivery_min_time_list")
+    min_time_list = list([x['min_time'] for x in input_dict_route['planned_route']['deliveries']])
+    for val in min_time_list:
+        print(val)
+
+    print("delivery_max_time_list")
+    max_time_list = list([x['max_time'] for x in input_dict_route['planned_route']['deliveries']])
+    for val in max_time_list:
+        print(val)
+
+    assert len(eta_list) == len(min_time_list) == len(max_time_list)
+
+    for i in range(len(eta_list)):
+        assert min_time_list[i] <= eta_list[i] <= max_time_list[i]
