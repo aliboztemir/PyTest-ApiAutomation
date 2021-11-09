@@ -79,15 +79,15 @@ http://127.0.0.1:8000/docs
 
 #### [PROBLEM] Problems seen in question 2.
 
-*In general, there were some shortcomings in the business rules. That's why I didn't ask you questions again. I have defined some conditions as I understand them. I designed test scenarios accordingly.
+* In general, there were some shortcomings in the business rules. That's why I didn't ask you questions again. I have defined some conditions as I understand them. I designed test scenarios accordingly.
 
-*is there Origination point input? Is the current location of the trucker owner being sent to the api? Does Origination take into account when calculating API routes?
+* is there Origination point input? Is the current location of the trucker owner being sent to the api? Does Origination take into account when calculating API routes?
 
-*Are fuel station, grocery and bank different entities/input type?
+* Are fuel station, grocery and bank different entities/input type?
 
-*What is the input(address list) type? (json array, comma separated text, file etc)
+* What is the input(address list) type? (json array, comma separated text, file etc)
 
-*Will we always accept the place list added by the truck owner as correct?
+* Will we always accept the place list added by the truck owner as correct?
 
 
 ##  Question 3:
