@@ -15,7 +15,7 @@ def test_match_id_deliver_planned():
 
 
     for val in output_dict_deliveries:
-        print(val in json_format_route['planned_route']['deliveries'])
+        print(val in json_format_route['planned_route']['deliveries']['algorithm_fields'])
 
 def test_check_carrying_capacity():
     response_route = client.get('/route')

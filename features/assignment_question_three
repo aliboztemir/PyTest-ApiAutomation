@@ -1,0 +1,6 @@
+Feature: API Feature
+   An API that shows Gherkin example
+   Scenario: Request something from the test API
+      Given I am a verified user
+      When I want to request something
+      Then I should get something
