@@ -68,8 +68,8 @@ http://127.0.0.1:8000/docs
 * Not: If you want to run the tests individually from the ide in your local, you should update the relative path in api.py. Paths are configured to run in terminal. For example: '../data/deliveries_for_planning.json'
 
 #### [PROBLEM] Problems seen in question 1.
-*In option b, the question asked to compare the total weight value with the carrying_capacity value. But some items did not have a weight value. I added condition in case of null.
-*Test steps c and d failed. The values in the test outputs did not pass the assert rule.
+* In option b, the question asked to compare the total weight value with the carrying_capacity value. But some items did not have a weight value. I added condition in case of null.
+* Test steps c and d failed. The values in the test outputs did not pass the assert rule.
 
 ![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
@@ -93,3 +93,52 @@ http://127.0.0.1:8000/docs
 ##  Question 3:
 
 * For the third question, you can see the test cases written in gherkin language under the ../features folder
+
+#### [PROBLEM] Problems seen in question 3.
+
+* In general, there were some shortcomings in the business rules. That's why I didn't ask you questions again. I have defined some conditions as I understand them. I designed test scenarios accordingly.
+* At start of day, API will respond only path to grocery?
+* Should i wait for first order?
+* What is shift hours?
+* "he will be storing enough supplies to make 100 tacos and will plan a stop for groceries shopping after at least 80 tacos are ordered"
+
+There is uncertainty in this step. Will the truck owner be driven to the grocery store after every order of 80 tacos or when he has 20 remaining supplies? If 80 orders are to be directed to the grocery store, this causes the following logical error. Because of this, I wrote test scenarios according to the constant stock of 20 tacos.
+
+1- According to every 80 orders
+
+------------- t1 morning-----
+100
+80 xxx
+------------- t2 -----
+120
+80xxx
+40
+------------- t3 -----
+140
+80xxx
+60
+------------- t4 -----
+160
+80xxx
+80
+------------- t5 -----
+180
+80xxx
+100
+
+
+2- According to the remaining 20 remaining supply
+
+------------- t1 morning-----
+100
+80 xxx
+20
+------------- t2 -----
+120
+100xxx (180xxx)
+20
+------------- t3 -----
+120
+100xxx
+20
+
