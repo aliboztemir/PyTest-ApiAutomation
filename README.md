@@ -67,7 +67,7 @@ http://127.0.0.1:8000/docs
 * If you want, you can run the tests in your local or with docker
 * Not: If you want to run the tests individually from the ide in your local, you should update the relative path in api.py. Paths are configured to run in terminal. For example: '../data/deliveries_for_planning.json'
 
-![Test Report Screenshot](https://github.com/aliboztemir/TakeawayTestAutomation/blob/main/screenshots/TestReportScreenShot.png)
+![Test Report Screenshot](https://github.com/aliboztemir/PyTest-ApiAutomation/blob/main/screenshot/Test%20Report.png)
 
 
 ### [PROBLEM] During the tests, the following problems were seen.
