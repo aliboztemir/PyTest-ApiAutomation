@@ -48,7 +48,25 @@ def test_check_carrying_capacity():
                'weight' in x['algorithm_fields']]
     for val in weights:
         print(val)
-    print("sum")
     print("sum", sum(weights))
 
     assert carrying_capacity >= sum(weights)
+
+
+def test_check_all_etas_min_max_route_time():
+    response_route = client.get('/route')
+    input_dict_route = json.loads(response_route.text)
+
+    print("eta_list")
+    eta_list = [x['algorithm_fields']['eta'] for x in input_dict_route['planned_route']['deliveries'] if
+                'eta' in x['algorithm_fields']]
+    for val in eta_list:
+        print(val)
+
+    route_min_time = input_dict_route['planned_route']['route_min_time']
+    print("route_min_time: ", route_min_time)
+    route_max_time = input_dict_route['planned_route']['route_max_time']
+    print("route_max_time: ", route_max_time)
+
+    for val in eta_list:
+        assert route_min_time <= val <= route_max_time
